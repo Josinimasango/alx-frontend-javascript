@@ -1,14 +1,10 @@
 function getResponseFromAPI() {
-    return new Promise((resolve, reject) => {
-        // Simulating an API response
-        const success = true;
-        if (success) {
-            resolve("API call succeeded");
-        } else {
-            reject("API call failed");
-        }
-    });
+  return new Promise((resolve, reject) => {
+    // Simulate an API call
+    setTimeout(() => {
+      resolve("Response from API");
+    }, 2000);
+  });
 }
 
 export default getResponseFromAPI;
-
