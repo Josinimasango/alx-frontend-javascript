@@ -1,28 +1,25 @@
-// Eslint-disable-next-line
-import Currency from './3-currency';
+import Currency from './3-currency.js';
 
 export default class Pricing {
   constructor(amount, currency) {
-    this.amount = amount;
-    this.currency = currency;
+    this._amount = amount;
+    this._currency = currency;
   }
 
-  // getter and setter for amount attribute
   get amount() {
     return this._amount;
   }
 
-  set amount(value) {
-    this._amount = value;
+  set amount(newAmount) {
+    this._amount = newAmount;
   }
 
-  // getter and setter for currency attribute
   get currency() {
     return this._currency;
   }
 
-  set currency(value) {
-    this._currency = value;
+  set currency(newCurrency) {
+    this._currency = newCurrency;
   }
 
   displayFullPrice() {
@@ -33,3 +30,4 @@ export default class Pricing {
     return amount * conversionRate;
   }
 }
+
