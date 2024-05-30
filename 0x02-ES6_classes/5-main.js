@@ -1,13 +1,18 @@
-import Building from './5-building.js';
+export default class Building {
+  constructor(sqft) {
+    this._sqft = sqft;
+  }
 
-const b = new Building(100);
-console.log(b);
+  // Getter for sqft attribute
+  get sqft() {
+    return this._sqft;
+  }
 
-class TestBuilding extends Building {}
-
-try {
-    new TestBuilding(200)
-}
-catch(err) {
-    console.log(err);
+  // Abstract method evacuationWarningMessage
+  evacuationWarningMessage() {
+    if (this.constructor !== Building
+        && typeof this.evacuationWarningMessage !== 'function') {
+      throw new Error('Class extending Building must override evacuationWarningMessage');
+    }
+  }
 }
