@@ -1,3 +1,4 @@
+// Eslint-disable-next-line
 import Currency from './3-currency';
 
 export default class Pricing {
@@ -6,6 +7,7 @@ export default class Pricing {
     this.currency = currency;
   }
 
+  // getter and setter for amount attribute
   get amount() {
     return this._amount;
   }
@@ -14,6 +16,7 @@ export default class Pricing {
     this._amount = value;
   }
 
+  // getter and setter for currency attribute
   get currency() {
     return this._currency;
   }
