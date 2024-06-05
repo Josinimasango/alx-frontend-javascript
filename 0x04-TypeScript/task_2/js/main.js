@@ -50,5 +50,18 @@ function executeWork(employee) {
         console.log(employee.workTeacherTasks());
     }
 }
+// Function to teach a class based on the subject
+function teachClass(todayClass) {
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    }
+    else if (todayClass === 'History') {
+        return 'Teaching History';
+    }
+}
+// Example usage of createEmployee and executeWork:
 executeWork(createEmployee(200)); // Getting to work
 executeWork(createEmployee(1000)); // Getting to director tasks
+// Example usage of teachClass:
+console.log(teachClass('Math')); // Teaching Math
+console.log(teachClass('History')); // Teaching History
